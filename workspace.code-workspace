@@ -1,0 +1,25 @@
+{
+    "folders": [
+		{
+			"path": "APM"
+		},
+		{
+			"path": "AUSY-FORMATION"
+		},
+		{
+			"path": "TP-FORMATION"
+		},
+		{
+			"path": "ANGULAR-FORMS"
+		},
+		{
+			"path": "APM-Final"
+		},
+		{
+			"path": "FULL_STACK_ANGULAR_JAVA"
+		}
+	],
+    "settings": {
+        "files.autoSave": "afterDelay"
+    }
+}

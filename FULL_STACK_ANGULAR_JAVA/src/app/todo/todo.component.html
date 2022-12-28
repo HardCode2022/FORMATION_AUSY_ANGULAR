@@ -1,0 +1,29 @@
+<H1>Ajout d'une Tâche</H1>
+
+<div class="container">
+    <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Entrer une valeur valide pour les deux champs</div>
+    <div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">Entrer une date valide</div>
+    <div class="alert alert-warning" *ngIf="todoForm.dirty && description.invalid">Entrer une description sur au moins 5 caractères</div>
+
+    <form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm">
+        <fieldset class="form-group">
+            <label>Description</label>
+            <input type="text" #description="ngModel" [(ngModel)]="todo.description" class="form-control" name="description" required="required" minlength="5">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Fait</label>
+            <input type="text" #done="ngModel" [(ngModel)]="todo.done" class="form-control" name="done">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Target Date</label>
+            <input type="date" #targetDate="ngModel" [ngModel]="todo.targetDate | date:'yyyy-MM-dd' " (ngModelChange)="todo.targetDate = $event" class="form-control" name="targetDate" required="required">
+        </fieldset>
+        <div class="container">
+          <button class="previous" class="btn btn-outline-primary" (click)='onBack()'>
+            <i class="left arrow icon"></i> &laquo; Precedent
+        </button>
+          <button type="submit" class="btn btn-success float-right">Enregistrer</button>
+        </div>
+    </form>
+</div>

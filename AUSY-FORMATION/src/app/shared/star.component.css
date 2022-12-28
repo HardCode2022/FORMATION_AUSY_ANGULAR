@@ -1,0 +1,11 @@
+.checked {
+    color: orange;
+}
+
+.crop {
+    overflow: hidden;
+}
+
+div {
+    cursor: pointer;
+}

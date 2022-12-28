@@ -1,0 +1,39 @@
+<h1> Mes Tâhes</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+    <table class="table" class="table table-striped">
+        <thead class="thead-dark ">
+            <tr>
+                <th>Identifiants</th>
+                <th>Description</th>
+                <th>Date Cible</th>
+                <th>Finaliser ?</th>
+                <th>Mettre à jour</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--   for (Todo todo: todos) {  -->
+            <tr *ngFor="let todo of todos ">
+                <td>{{todo.id}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.targetDate | date:'dd-MM-yyyy' | uppercase}}</td>
+                <td>{{todo.done}}</td>
+                <td><button (click)="updateTodo(todo.id) " class="btn btn-success ">Mettre à jour</button></td>
+                <td><button (click)="deleteTodo(todo.id) " class="btn btn-warning">Supprimer</button></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+   <div class="container">
+          <button class="previous" class="btn btn-outline-primary" (click)='onBack()'>
+            <i class="left arrow icon"></i> &laquo; Precedent
+        </button>
+          <button (click)="addTodo() " class="btn btn-info float-right ">Ajouter une tâche</button>
+  </div>
+
+</div>

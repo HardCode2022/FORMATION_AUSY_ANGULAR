@@ -1,0 +1,60 @@
+<h3>Ajout d'un utilisateur</h3>
+<div class="card">
+    <div class="alert alert-warning" *ngIf="userForm.dirty && userForm.invalid">Entrer une valeur valide pour les champs</div>
+    <div class="alert alert-warning" *ngIf="userForm.dirty && nom.invalid">Entrer un nom sur au moins 4 caractères</div>
+
+    <form class="row g-3" #userForm="ngForm" (ngSubmit)="enregisterUser(userForm)">
+        <div class=" col-md-4 ">
+            <div class="form-outline ">
+                <input type="text " [(ngModel)]="user.nom" class="form-control " placeholder="Nom" name="nom" required #nom="ngModel" [class.field.error]="userForm.submitted && nom.invalid" minlength="4" />
+                <label for="validationDefault01 " class="form-label ">Nom</label>
+                <div [hidden]="!userForm.submitted || nom.valid " class="alert alert-danger ">Merci de renseigner un Nom</div>
+            </div>
+        </div>
+
+        <div class="col-md-4 ">
+            <div class="form-outline ">
+                <input type="number " [(ngModel)]="user.age" class="form-control" name="age" required #age="ngModel" />
+                <label for="validationDefault02 " class="form-label ">Age</label>
+            </div>
+        </div>
+
+        <div class=" col-md-4 ">
+            <div class="form-outline ">
+                <input type="text " [(ngModel)]="user.poste" class="form-control" name="poste" placeholder="Poste" required #poste="ngModel" [class.field.error]="userForm.submitted && poste.invalid" />
+                <label for="validationDefault01 " class="form-label ">Poste</label>
+                <div [hidden]="!userForm.submitted || poste.valid " class="alert alert-danger ">Merci de renseigner un Poste</div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 ">
+            <div class="form-outline ">
+                <input type="text " [(ngModel)]="user.competences" class="form-control" placeholder="Trois compétences suivi d'une virgule" name="competences" required #competences="ngModel" [class.field.error]="userForm.submitted && competences.invalid" />
+                <label for="validationDefaultUsername " class="form-label ">Compétences</label>
+                <div [hidden]="!userForm.submitted || poste.valid " class="alert alert-danger ">Merci de renseigner une compétences </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 ">
+            <div class="form-outline ">
+                <input type="text " [(ngModel)]="user.note" class="form-control" placeholder="Une note sur 10" name="note" required #note="ngModel" [class.field.error]="userForm.submitted && note.invalid">
+                <label for="validationDefaultUsername " class="form-label ">Note</label>
+                <div [hidden]="!userForm.submitted || note.valid " class="alert alert-danger ">Merci de renseigner une note </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 ">
+            <div class="form-outline ">
+                <input type="text " type="text " [(ngModel)]="user.image " class="form-control " name="image " required #image="ngModel" />
+                <label for="validationDefault05 " class="form-label ">Image</label>
+            </div>
+        </div>
+        <div class="col-12 ">
+          <button class="previous" class="btn btn-outline" (click)='onBack()'>
+            <i class="left arrow icon"></i> &laquo; Precedent
+        </button>
+            <button type="submit" class="btn btn-success float-right">Enregistrer</button>
+        </div>
+    </form>
+</div>

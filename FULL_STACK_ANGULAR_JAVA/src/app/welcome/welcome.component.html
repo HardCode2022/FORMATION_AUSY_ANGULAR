@@ -1,0 +1,18 @@
+<H1>Bienvenue!</H1>
+
+<div class="container">
+    Bienvenue {{name}}. Vous pouvez gérer vos tâches en cliquant <a routerLink="/todos">Ici</a>
+</div>
+
+<div class="container">
+    Cliquez sur ce boutton pour obtenir un message de bienvenue personnalisé
+    <button (click)="getWelcomeMessageWithParameter()" class="btn btn-warning">Affichage du message</button>
+</div>
+
+<div class="container" *ngIf="welcomeMessageFromService">
+    <H2>Votre message personnalisé</H2>
+    {{welcomeMessageFromService}}
+</div>
+<div>
+    <img class="ui fluid rounded image" src="assets/images/university.png">
+</div>

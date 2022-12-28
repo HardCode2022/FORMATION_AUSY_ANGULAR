@@ -1,0 +1,36 @@
+<div>
+    <h2>{{pageTitle}}</h2>
+</div>
+
+<div class="card">
+    <div class="card-header" *ngIf='user'>
+        <div class="ui card">
+            <div class="image">
+                <img [src]='user.userImage'>
+            </div>
+            <div class="content">
+                <a class="header"> {{user.Nom}}</a>
+                <div class="meta">
+                    <span class="date"> {{user.Age}} ans</span>
+                </div>
+                <div class="description">
+                    {{user.Nom}} travaille chez AUSY en tant que {{user.Poste |lowercase}}
+                </div>
+            </div>
+
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i> Score : {{user.Note}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="ui labeled icon button" (click)='onBack()'>
+  <i class="left arrow icon"></i> Retour
+</button>
+
+<button class="ui labeled icon button" (click)='onHome()'>
+  <i class="pause icon"></i>Accueil
+</button>

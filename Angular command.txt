@@ -1,0 +1,44 @@
+############################################################################ANGULAR############################################################################################	
+	ng new Nomduprojet==>creer un projet
+    ng  help ==> Pour l'aide en ligne 	
+	ng g c Nomducomposant --flat ==> Creer un composant a la racine du chemin 
+	ng g s Nomduservice ==>permet de creer un service 
+	ng g g nomduguard ==> pour securiser un lien 
+	ng g m NomduModule --flat -m NomdeDependenceModule ===> permet de generer un module dependant 
+	ng g p NomdelaPipe ==> Permet de creer une pipe de transformation de données 
+	ng serve ==> permet de lancer le serve angular
+	ng serve -o ==> permet de lancer ouvrir directement le resultat sous un navigateur
+	code.==> permet d'ouvrir vsCode(se positionner dans le repertoiredu dit projet)
+	ng build ==> commande qui permet de builder le projet en generant un fichier "DIST" : dans ce dist, on pourras recuperer le projet et le deployé sur les envs
+	ng test ==> Permet de lancer l'application en mode test unitaire sur le navigateur 
+	ng e2e ==>  ou EndToEnd Test Permet de lancer les tests d'integration 
+	NB: Pour chaque application , le fichier se terminant par .ts contient les Tests
+	
+npm install ==> pour installer les composants npm sur vsCode
+npm start==> permet egalement de lancer le serve via une commande sous vsCode 
+npm install -g @angular/cli
+CTRL+C ==> Permet de fermer la console
+CTRL+ALT+C ==> Permet d'ouvrir la console(cmd)	 
+CTRL+/==> Permet de commenter ou decommenter un code sous vs
+
+
+############################################################################REACT################################################################################################
+ npx create-react-app NomDuProjet ==> permet de creer un nouveau projet en react , à la racine du repertoire que vous aurez choisi
+ rcc==> Permet de creer un component en mode Intellisence , une fois que le fichier creer.
+ ###################################################################MONGODB############################################################################################
+ commande Shell:
+ mongod ==> pour lancer le serveur mongoDb
+ mongo ==> pour lancer la BDD de mongo dans une autre fenetre hyper 
+ ctrl+L ==> Pour vider la console 
+ ###########################################################################GIT##################################################################################################
+CONFIGURATION USER ET EMAIL D'UN DEPOT GITLAB: 
+ git config --global user.name "Maurice GUILAVOGUI"
+ git config --global user.email "maurice.guilavogui.ext@groupe-mma.fr"
+ 
+ --Pour les projets deja existant:
+ Initialiser un depot git ==> git init 
+ synchroniser avec le repo ==>git remote add origin "adresse du reomote"
+ cloner un projet dans le dosseir courant : git clone "adresse".
+ 
+
+ 

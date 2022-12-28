@@ -1,0 +1,34 @@
+<div>
+    <h2>{{pageTitle}} : {{user.nom |uppercase}}</h2>
+</div>
+
+<div class="container">
+    <div class="card-header" *ngIf='user'>
+        <div class="card-body">
+            <div class="image">
+                <img [src]='user.image'>
+            </div>
+            <div class="content">
+                <a class="header"> {{user.nom}}</a>
+                <div class="meta">
+                    <span class="date"> {{user.age}} ans</span>
+                </div>
+                <div class="description">
+                    {{user.nom}} travaille en tant que {{user.poste |uppercase}}
+                </div>
+            </div>
+
+            <div class="extra content">
+                <a>
+                    <i class="user icon">Score : {{user.note}}</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <button class="previous" class="btn btn-outline-primary" (click)='onBack()'>
+       <i class="left arrow icon"></i> &laquo; Precedent
+  </button>
+</div>

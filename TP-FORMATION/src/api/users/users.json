@@ -1,0 +1,49 @@
+[{
+    "userId": 1,
+    "Nom": "Bob",
+    "Age": 48,
+    "Poste": "Architecte",
+    "Competences": "JEE,TALEND,BO",
+    "Note": "4,5",
+    "userImage": "assets/images/bob.png"
+}, {
+    "userId": 2,
+    "Nom": "Alice",
+    "Age": 34,
+    "Poste": "Ingenieur",
+    "Competences": "HTML,CSS,MSBI",
+    "Note": "5",
+    "userImage": "assets/images/alice.png"
+}, {
+    "userId": 3,
+    "Nom": "Maurice",
+    "Age": 33,
+    "Poste": "Consultant",
+    "Competences": "BI,QLIKVIEW,PYTHON",
+    "Note": "7",
+    "userImage": "assets/images/maurice.png"
+}, {
+    "userId": 4,
+    "Nom": "Rob",
+    "Age": 23,
+    "Poste": "Chimiste",
+    "Competences": "MAVEN,HIBERNATE,AIA",
+    "Note": "3,5",
+    "userImage": "assets/images/rob.png"
+}, {
+    "userId": 5,
+    "Nom": "Mohamed",
+    "Age": 38,
+    "Poste": "Biologiste",
+    "Competences": "KAFTA,QLIKSENCE,C++",
+    "Note": "4",
+    "userImage": "assets/images/mohamed.png"
+}, {
+    "userId": 6,
+    "Nom": "KAMANO",
+    "Age": 40,
+    "Poste": "Infirmier",
+    "Competences": "Teste,Appelle,kafka",
+    "Note": "8",
+    "userImage": "assets/images/mohamed.png"
+}]
